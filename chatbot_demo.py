@@ -30,7 +30,7 @@ def chatbot_response(user_input):
         return "To submit your meter reading, open the app and tap *Submit Reading*. You can even use your phone camera — the app’s OCR feature will auto-detect the numbers!"
 
     elif any(word in text for word in ["app", "download", "install"]):
-        return "You can download the Utility App from the **Play Store** or **App Store**. Just search for *UtilityConnect* and install it."
+        return "You can download the Utility App from the **Play Store** or **App Store**. Just search for *EBS App* and install it."
 
     elif any(word in text for word in ["help", "support", "contact", "chat"]):
         return "For support, open the app and go to *Help → Chat* to chat with us, *Help → Phone* to call us and *Help → Support Email* to write to us."
@@ -66,3 +66,4 @@ if submit_button and user_input:
     st.session_state["messages"].append({"role": "assistant", "content": response})
 
     st.rerun()
+
